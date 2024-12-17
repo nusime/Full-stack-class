@@ -1,5 +1,9 @@
 /** Import the registerUser function and the car objects.
+<<<<<<< HEAD
     Register a user, check which cars they can afford and display the results. */
+=======
+    Register a user, check which cars they can afford, and display the results. */
+>>>>>>> a76832340839a7144b6461365c2db2fe254e5912
 
 import  {registration}  from "./registration.js";    
 import { chevroletCamaro, fordMustang, hondaCivic, teslaModel3, toyotaCorolla } from "./cars.js";

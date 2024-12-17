@@ -2,7 +2,7 @@
     Log these variables to the console
  */
 
-let myName = "Nuseyba";
+const myName = "Nuseyba";
 let age = 22;
 let isStudent = true;
 

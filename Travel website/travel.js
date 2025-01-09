@@ -1,10 +1,17 @@
 document.getElementById('title').addEventListener('click', function(){
-    this.style.color = 'green';
+    this.style.color = 'blue';
 });
 
-document.getElementById('info').addEventListener('mousedown', function(){
-    prompt('Wanna more info? Click the link with more info');
+document.getElementById('title').addEventListener('dblclick', function(){
+    alert('You double clicked the h1 title');
 });
+
+const infoDiv = document.querySelector('.infoo');
+if(infoDiv){
+    infoDiv.addEventListener('mousedown', function(){
+        alert('Wanna more info? Click the link with more info');
+    });
+}
 
 document.getElementById('table').addEventListener('mouseover', function(){
     this.style.backgroundColor = 'blue';
@@ -14,9 +21,12 @@ document.getElementById('table').addEventListener('mousemove', function(event){
     console.log(`Mouse moved to (${event.clientX}, ${event.clientY})`);
 });
 
-document.getElementById('sub-tittle').addEventListener('mouseup', function(){
-    alert('Hey there this is h3 heading tag');
-});
+const subTitle = document.querySelector('.sub-title');
+if(subTitle){
+    subTitle.addEventListener('mouseup', function(){
+        alert('Hey there this is h3 heading tag');
+    });
+}
 
 document.addEventListener('keydown', function(event){
     console.log(`key is pressed ${event.key}`);

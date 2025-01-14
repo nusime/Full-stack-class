@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exercise</title>
+</head>
+<body>
+    <form action="" id="myform">
+        <label for=""><b>UserName</b></label>
+        <input id ='uname' type="text">
+        <label for=""><b>Email</b></label>
+        <input id="email" type="email" placeholder="example123@gmail.com">
+        <br>
+        <label for=""><b>Password</b></label>
+        <input id="pass" type="password" placeholder="ex156#pf">
+        <label for=""><b>Confirm</b></label>
+        <input id="confirm-pass" type="password" placeholder="ex156#pf">
+        <br>
+        <label for=""><b>Birthdate</b></label>
+        <input id="bdate" type="date" max="2015-12-31" required>
+        <label for=""><b>Phone</b></label>
+        <input id="tel" type="telephone" placeholder="(123) 456-7890">
+        <br>
+        <textarea name="" id="about">Tell sth abt yourself</textarea>
+        <br>
+        <button type="submit" onclick="validateForm()">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

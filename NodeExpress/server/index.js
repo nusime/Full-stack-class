@@ -67,7 +67,28 @@ app.put('/edit-movie', async(req, res) => {
         console.error(error);
         res.status(500).json({error: 'Internal Server Error'});
     }
-})
+});
+
+app.delete('/deleteMovie', async(req, res) => {
+    try {
+        const {movieName} = req.body;
+        if(!movieName) {
+            return res.status(400).json({error: 'Please provide a movie name'});
+        }
+
+        const movieIndex = movies.findIndex(movie => movie.toLowerCase() === movieName.toLowerCase());
+        if(movieIndex === -1){
+            return res.status(404).json({error: 'Movie not found'});
+        }
+
+        const deletedMovie = movies.splice(movieIndex, 1);
+        return res.status(200).json({message: `${deletedMovie} is deleted successfully`, movies});
+    
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
